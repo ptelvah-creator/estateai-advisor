@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EstateAI Advisor</title>
+</head>
+<body>
+    <h1>🏡 EstateAI Advisor</h1>
+    <p>Deploy successful! Now add full chatbot UI.</p>
+    <script>
+        // Safe storage
+        const safeStorage = (() => {
+            try {
+                localStorage.setItem('test','test');
+                localStorage.removeItem('test');
+                return localStorage;
+            } catch(e) {
+                return { getItem: () => null, setItem: () => {} };
+            }
+        })();
+        console.log("App loaded");
+    </script>
+</body>
+</html>
